@@ -101,8 +101,8 @@ trainデータの予測値を作成(後に使用)<br>
 <br>
 ## LightGBMで精度アップ(LB 0.874)<br>
 平均値を使用している部分など予測精度に不安がある部分に関してLightGBMを使用しました。<br>
-やや複雑にはなりますが、精度アップのために実施しました。<br>
-
+やや可読性は落ちますが、精度アップのために実施しました。<br>
+<br>
 ### ・dessert1～5、snack1～3、bento1～4、tild1,2、men1～6
 highest, lowest, rain, month, day, week, week_number, rain_yesterday, rain_tomorrow, 各予測値　を使用してLightGBM<br>
 元モデルとの平均値を最終データに<br>
