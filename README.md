@@ -1,10 +1,27 @@
-# ProbSpace_weather_merchandising_solution
+# 【ProbSpace】コンビニ商品の売上予測【1st_place_solution】
 
-## 目次
+## 目次<br>
+[コンペ概要](#コンペ概要)<br>
+[結果](#結果)<br>
 [作成した特徴量](#作成した特徴量)<br>
 分析1：[可読性の高いホワイトボックスモデルの作成(LB 0.890)](#可読性の高いホワイトボックスモデルの作成lb-0890)<br>
 分析2：[LightGBMで精度アップ(LB 0.874)](#lightgbmで精度アップlb-0874)<br>
-
+<br>
+<br>
+## コンペ概要<br>
+気象データをもとに各商品の日別売上個数を予測<br>
+データはシミュレーションデータ<br>
+評価指標はPinball loss Error (q=(0.01,0.1,0.5,0.9,0.99))<br>
+![image](https://user-images.githubusercontent.com/118031932/201456256-98df1a40-3232-4f8f-8e9a-096368add78c.png)<br>
+コンペサイト<br>
+https://comp.probspace.com/competitions/weather_merchandising<br>
+<br>
+<br>
+## 結果<br>
+PublicLB：1位(スコア 0.874)<br>
+PrivateLB：1位(スコア)<br>
+<br>
+<br>
 ## 作成した特徴量<br>
 分析1用<br>
 ・year(2018～2019年に設定([理由後述](#alcol13)))<br>
@@ -15,7 +32,8 @@
 分析2用<br>
 ・week_number(月の中で何週目か)<br>
 ・rain_yesterday(前の日の雨の値)<br>
-
+<br>
+<br>
 ## 可読性の高いホワイトボックスモデルの作成(LB 0.890)<br>
 コンペでは不要かもしれませんが、できるだけ可読性の高いモデルを作成することを意識して、データをよく観察し、回帰分析をメインに分析しました。<br>
 <br>
@@ -72,14 +90,15 @@ trainデータの予測値を作成(後に使用)<br>
 手動で下記のような分類を実施
 各クラスの平均値を採用
 trainデータの予測値を作成(後に使用)<br>
-![image](https://user-images.githubusercontent.com/118031932/201453788-896c01a6-fa16-4b01-9ccb-e95970231420.png)
+![image](https://user-images.githubusercontent.com/118031932/201453788-896c01a6-fa16-4b01-9ccb-e95970231420.png)<br>
 <br>
 ### ・men1～6
 手動で下記のような分類を実施
 各クラスの平均値を採用
 trainデータの予測値を作成(後に使用)<br>
-![image](https://user-images.githubusercontent.com/118031932/201453866-a94f31d6-c5e9-42c7-8bbf-55fa7df5c4f3.png)
-
+![image](https://user-images.githubusercontent.com/118031932/201453866-a94f31d6-c5e9-42c7-8bbf-55fa7df5c4f3.png)<br>
+<br>
+<br>
 ## LightGBMで精度アップ(LB 0.874)<br>
 平均値を使用している部分など予測精度に不安がある部分に関してLightGBMを使用しました。<br>
 やや複雑にはなりますが、精度アップのために実施しました。<br>
@@ -89,7 +108,7 @@ highest, lowest, rain, month, day, week, week_number, rain_yesterday, rain_tomor
 元モデルとの平均値を最終データに<br>
 <br>
 ### ・hot1～3
-week,各予測値　を使用してLightGBM
+week,各予測値　を使用してLightGBM<br>
 あってもなくてもLBの値は変わらなかったが、データを見る限りあるので実施<br>
 PublicLBの値：あり→11111、なし→11111<br>
 LightGBMの予測値を最終データに
