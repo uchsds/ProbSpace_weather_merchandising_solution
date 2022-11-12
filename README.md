@@ -18,7 +18,7 @@
 <br>
 <br>
 ## 結果<br>
-PublicLB：1位(スコア 0.874)<br>
+PublicLB：1位(スコア 0.84)<br>
 PrivateLB：1位(スコア)<br>
 <br>
 <br>
