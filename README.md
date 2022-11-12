@@ -87,14 +87,14 @@ trainデータの予測値を作成(後に使用)<br>
 trainデータの予測値を作成(後に使用)<br>
 <br>
 ### ・tild1,2
-手動で下記のような分類を実施
-各クラスの平均値を採用
+手動で下記のような分類を実施<br>
+各クラスの平均値を採用<br>
 trainデータの予測値を作成(後に使用)<br>
 ![image](https://user-images.githubusercontent.com/118031932/201453788-896c01a6-fa16-4b01-9ccb-e95970231420.png)<br>
 <br>
 ### ・men1～6
-手動で下記のような分類を実施
-各クラスの平均値を採用
+手動で下記のような分類を実施<br>
+各クラスの平均値を採用<br>
 trainデータの予測値を作成(後に使用)<br>
 ![image](https://user-images.githubusercontent.com/118031932/201453866-a94f31d6-c5e9-42c7-8bbf-55fa7df5c4f3.png)<br>
 <br>
