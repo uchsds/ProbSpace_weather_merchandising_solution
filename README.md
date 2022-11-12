@@ -9,12 +9,10 @@
 [その他](#その他)<br>
 <br>
 ## コンペ概要<br>
+コンペサイト：https://comp.probspace.com/competitions/weather_merchandising<br>
 気象データをもとに各商品の日別売上個数を予測<br>
-データはシミュレーションデータ<br>
 評価指標はPinball loss Error (q=(0.01,0.1,0.5,0.9,0.99))<br>
 ![image](https://user-images.githubusercontent.com/118031932/201456256-98df1a40-3232-4f8f-8e9a-096368add78c.png)<br>
-コンペサイト<br>
-https://comp.probspace.com/competitions/weather_merchandising<br>
 <br>
 <br>
 ## 結果<br>
