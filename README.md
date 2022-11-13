@@ -29,7 +29,7 @@ PrivateLB：1位(スコア：1111)<br>
 ・day<br>
 ・week<br>
 ・rain_tomorrow(次の日の雨の値)<br>
-分析2用<br>
+分析2,3用<br>
 ・week_number(月の中で何週目か)<br>
 ・rain_yesterday(前の日の雨の値)<br>
 <br>
