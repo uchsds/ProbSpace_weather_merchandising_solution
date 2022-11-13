@@ -75,7 +75,7 @@ highest＞10は上限値が決まっているようなので、上限値以上�
 <br>
 ### ・alcol1～3
 week,rainの重回帰分析<br>
-※yearを2018～2019年に設定することで、weekとalcolの関係が線形になる
+※yearを2018～2019年に設定することで、weekとalcolの関係が線形になり、線形重回帰で扱いやすくなる
 ![image](https://user-images.githubusercontent.com/118031932/201454164-6c3adf82-28ab-4cb8-b46b-42a783f7cc1a.png)<br>
 alcol3のみ外れ値を除去<br>
 <br>
