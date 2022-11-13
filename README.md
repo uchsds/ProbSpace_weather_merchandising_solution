@@ -4,9 +4,9 @@
 [コンペ概要](#コンペ概要)<br>
 [結果](#結果)<br>
 [作成した特徴量](#作成した特徴量)<br>
-分析1：[可読性の高いホワイトボックスモデルの作成(LB 0.890)](#可読性の高いホワイトボックスモデルの作成lb-0890)<br>
-分析2：[LightGBMで精度アップ(LB 0.869)](#lightgbmで精度アップlb-0869)<br>
-分析3：[他の手法でもモデル作成しブレンド(LB 0.864)](#他の手法でもモデル作成しブレンドlb-0864)<br>
+分析1：[可読性の高いホワイトボックスモデルの作成(LB 0.890 (Private 0.728))](#可読性の高いホワイトボックスモデルの作成lb-0890-private-0728)<br>
+分析2：[LightGBMで精度アップ(LB 0.869 (Private 0.693))](#lightgbmで精度アップlb-0869-private-0693)<br>
+分析3：[他の手法でもモデル作成しブレンド(LB 0.864 (Private 0.693))](#他の手法でもモデル作成しブレンドlb-0864-private-0693)<br>
 [その他(個人的備忘録)](#その他個人的備忘録)<br>
 <br>
 ## コンペ概要<br>
@@ -19,7 +19,7 @@
 <br>
 ## 結果<br>
 PublicLB：1位(スコア：0.864)<br>
-PrivateLB：X位(スコア：XXXX)<br>
+PrivateLB：1位(スコア：0.693)<br>
 <br>
 <br>
 ## 作成した特徴量<br>
@@ -34,7 +34,7 @@ PrivateLB：X位(スコア：XXXX)<br>
 ・rain_yesterday(前の日の雨の値)<br>
 <br>
 <br>
-## 可読性の高いホワイトボックスモデルの作成(LB 0.890)<br>
+## 可読性の高いホワイトボックスモデルの作成(LB 0.890 (Private 0.728))<br>
 コンペでは不要かもしれませんが、できるだけ可読性の高いモデルを作成することを意識して、データをよく観察し、回帰分析をメインに分析しました。<br>
 基本的に一つ一つ確認しながら分析しました。ですので、コードにグラフの描画が多めです。<br>
 そのままアップロードすると重くて表示されなかったので、実行結果は消しています。<br>
@@ -103,7 +103,7 @@ trainデータの予測値を作成(後に使用)<br>
 ![image](https://user-images.githubusercontent.com/118031932/201453866-a94f31d6-c5e9-42c7-8bbf-55fa7df5c4f3.png)<br>
 <br>
 <br>
-## LightGBMで精度アップ(LB 0.869)<br>
+## LightGBMで精度アップ(LB 0.869 (Private 0.693))<br>
 hotの週依存が見えない部分が気になったのと、平均値を採用しているターゲットの予測精度に不安があったので、<br>
 これらのターゲットに関して前の予測値も特徴量に入れてLightGBMを実施しました。<br>
 やや可読性は落ちますが、精度アップのために実施しました。<br>
@@ -116,19 +116,19 @@ dessertは大きい値の予測範囲が広くなっているため、前の予�
 week,各予測値　を使用してLightGBM<br>
 <br>
 <br>
-## 他の手法でもモデル作成しブレンド(LB 0.864)<br>
+## 他の手法でもモデル作成しブレンド(LB 0.864 (Private 0.693))<br>
 LightGBMと同じ特徴量でXGBoostとRandam Forestも試してみました。<br>
 <br>
 ### それぞれのスコア<br>
-LightGBM(max_depth=10)：0.869　※最終提出①<br>
-LightGBM(max_depth=50)：0.874<br>
-XG Boost：0.877<br>
-Randam Forest：0.887<br>
+LightGBM(max_depth=10)：0.869(Private 0.693)　※最終提出①<br>
+LightGBM(max_depth=50)：0.874(Private 0.691)<br>
+XG Boost：0.877(Private 0.710)<br>
+Randam Forest：0.887(Private 0.732)<br>
 <br>
 ### これらをブレンド(Averaging)したスコア<br>
-LightGBM(max_depth=10) + LightGBM(max_depth=50) + XG Boost + Randam Forest：0.867<br>
-LightGBM(max_depth=10) + XG Boost + Randam Forest：0.866<br>
-LightGBM(max_depth=50) + XG Boost + Randam Forest：0.864　※最終提出②<br>
+LightGBM(max_depth=10) + LightGBM(max_depth=50) + XG Boost + Randam Forest：0.867(Private 0.692)<br>
+LightGBM(max_depth=10) + XG Boost + Randam Forest：0.866(Private 0.693)<br>
+LightGBM(max_depth=50) + XG Boost + Randam Forest：0.864(Private 0.693)　※最終提出②<br>
 <br>
 <br>
 ## その他(個人的備忘録)<br>
@@ -152,6 +152,7 @@ Pythonも初学者なので勉強しながら進めました。ですので、�
 <br>
 再作成したモデルに関しても、締め切り前日ぐらいからモデルのブレンドを試しました。<br>
 個々のモデルのスコアはあまりよくなかったですが、ブレンドするとスコアが上がりました。<br>
+Privateの値見るとあまり意味はなかったようですが・・・
 <br>
 ### ・気づき
 EDAは大事だなあと感じたので、今後は最初からデータをよく理解し、精度の高いモデルを早めに仕上げたうえで、<br>
