@@ -18,8 +18,8 @@
 <br>
 <br>
 ## 結果<br>
-PublicLB：1位(スコア 0.84)<br>
-PrivateLB：1位(スコア)<br>
+PublicLB：1位(スコア：0.864)<br>
+PrivateLB：1位(スコア：1111)<br>
 <br>
 <br>
 ## 作成した特徴量<br>
