@@ -118,13 +118,13 @@ week,各予測値　を使用してLightGBM<br>
 LightGBMと同じ特徴量でXGBoostとRandam Forestも試してみました。<br>
 <br>
 ### それぞれのスコア<br>
-LightGBM(max_depth=10)：0.869　最終提出①<br>
+LightGBM(max_depth=10)：0.869　※最終提出①<br>
 LightGBM(max_depth=50)：0.874<br>
 XG Boost：0.877<br>
 Randam Forest：0.887<br>
 <br>
 ### これらをブレンド(Averaging)したスコア<br>
-LightGBM(max_depth=50) + XG Boost + Randam Forest：0.864　最終提出②<br>
+LightGBM(max_depth=50) + XG Boost + Randam Forest：0.864　※最終提出②<br>
 LightGBM(max_depth=10) + XG Boost + Randam Forest：0.866<br>
 LightGBM(max_depth=50) + LightGBM(max_depth=10) + XG Boost + Randam Forest：0.867<br>
 <br>
