@@ -123,9 +123,9 @@ XG Boost：0.877<br>
 Randam Forest：0.887<br>
 <br>
 ### これらをブレンド(Averaging)したスコア<br>
-LightGBM(max_depth=50) + XG Boost + Randam Forest：0.864　※最終提出②<br>
+LightGBM(max_depth=10) + LightGBM(max_depth=50) + XG Boost + Randam Forest：0.867<br>
 LightGBM(max_depth=10) + XG Boost + Randam Forest：0.866<br>
-LightGBM(max_depth=50) + LightGBM(max_depth=10) + XG Boost + Randam Forest：0.867<br>
+LightGBM(max_depth=50) + XG Boost + Randam Forest：0.864　※最終提出②<br>
 <br>
 <br>
 ## その他<br>
