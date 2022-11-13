@@ -1,4 +1,4 @@
-# 【ProbSpace】コンビニ商品の売上予測【_place_solution】
+# 【ProbSpace】コンビニ商品の売上予測【1st_place_solution】
 
 ## 目次<br>
 [コンペ概要](#コンペ概要)<br>
