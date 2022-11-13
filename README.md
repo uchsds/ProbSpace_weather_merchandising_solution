@@ -50,7 +50,7 @@ lowest＜10と10≦lowest＜20の2つの範囲で、lowestに対して単回帰�
 <br>
 ### ・hot1～3
 lowest≦15とlowest＞15の2つの範囲で、lowestに対して単回帰モデルを作成(testデータはすべてlowest≦15)<br>
-週依存があるように見えるが、週を入れるとLBの値が下がったので、ここでは週は使用しなかった<br>
+週依存があるように見えるが、weekをOne-hot Encordingして変数に入れるとLBの値が下がったので、ここでは使用しなかった<br>
 ![image](https://user-images.githubusercontent.com/118031932/201454060-907f0e03-cdab-4280-adb6-1c1b58043e71.png)<br>
 trainデータの予測値を作成(後に使用)<br>
 <br>
