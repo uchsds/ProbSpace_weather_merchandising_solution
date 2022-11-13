@@ -107,7 +107,6 @@ hotの週依存が見えない部分が気になったのと、平均値を採�
 <br>
 ### ・dessert1～5、snack1～3、bento1～4、tild1,2、men1～6
 highest, lowest, rain, month, day, week, week_number, rain_yesterday, rain_tomorrow, 各予測値　を使用してLightGBM<br>
-元モデルとの平均値を最終データに<br>
 dessertは大きい値の予測範囲が広くなっているため、前の予測との平均値を使用(逆に前の予測は全体的に予測範囲が狭い)<br>
 <br>
 ### ・hot1～3
