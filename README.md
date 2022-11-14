@@ -160,3 +160,9 @@ EDAは大事だなあと感じたので、今後は最初からデータをよ�
 またスタッキングが強力であることも体感したので、コンペ序盤は多様なモデル作成をするのが良いと思いました。<br>
 <br>
 今回この辺りに気づいたのが、締め切り直前だったので、ほとんど取り組めませんでした。少し心残りです。<br>
+<br>
+<br>
+<br>
+# Lisence
+<br>
+This project is licensed under the MIT License, see the LICENSE.txt file for details
